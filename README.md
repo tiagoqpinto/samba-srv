@@ -2,10 +2,11 @@
 Samba server using docker for creating network shares
 
 ---
+https://github.com/Mladia/samba-srv 
 
 - Supports up to 9 Shares with different users and permission
 - User passwords transmitted through docker secrets
-- works on arm
+- works on arm (raspberry pi)
 
 
 Nework share definition with environment variable `SHARE_0:path_folder:Username:rights`.
