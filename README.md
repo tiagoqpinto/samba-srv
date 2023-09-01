@@ -17,7 +17,7 @@ Docker compose example
 version: "3.8"
 services:
     samba-srv:
-        image: ghcr.io/mladia/samba-srv:main
+        image: mladia/samba-srv
         container_name: samba-srv
         ports:
           - 445:445
