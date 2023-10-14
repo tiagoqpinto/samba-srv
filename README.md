@@ -33,10 +33,10 @@ services:
           SHARE_2: "Data:/share/data:Alice:rw"
           SHARE_3: "Media-r:/share/media:Bob:r"
 
-    secrets:
-        Alice:
-          file: /app/samba-srv/Alice
-        Bob:
-          file: /app/samba-srv/Bob
+secrets:
+    Alice:
+      file: /app/samba-srv/Alice
+    Bob:
+      file: /app/samba-srv/Bob
 ```
 
