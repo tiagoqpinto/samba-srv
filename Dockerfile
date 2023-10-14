@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt update 
-RUN apt install -y --no-install-recommends tzdata samba-common-bin samba
+RUN apt install -y --no-install-recommends tzdata samba-common-bin samba smbclient
 
 WORKDIR /app/
 COPY smb.conf /app/smb.conf
