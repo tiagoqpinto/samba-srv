@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM lsiobase/ubuntu:jammy
 
 RUN apt update 
 RUN apt install -y --no-install-recommends tzdata samba-common-bin samba smbclient
