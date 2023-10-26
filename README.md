@@ -1,7 +1,8 @@
-# samba-srv
+# samba
 Samba server using docker for creating network shares
 
 ---
+forked from:
 https://github.com/Mladia/samba-srv 
 
 - Supports up to 9 Shares with different users and permission
@@ -17,9 +18,10 @@ Docker compose example
 ```
 version: "3.8"
 services:
-    samba-srv:
-        image: mladia/samba-srv
-        container_name: samba-srv
+    samba:
+        container_name: samba
+        image: tiagoqpinto/samba
+        restart: always
         ports:
           - 445:445
         secrets:
@@ -40,3 +42,11 @@ secrets:
       file: /app/samba-srv/Bob
 ```
 
+Image derived from linuxserver base image.
+
+For the developer, build and push commands:
+
+```
+docker build -t tiagoqpinto/samba:latest -t tiagoqpinto/samba:v1.0.0 .
+docker image push --all-tags tiagoqpinto/samba
+```
